@@ -29,4 +29,9 @@ class Algorithm {
         }
         return false
     }
+    
+    /// 合併兩個已排序過的陣列，回傳結果也是排序好的
+    func combineTwoSortedArray(first firstArray: [Int], andSecond secondArray: [Int]) -> [Int] {
+        return []
+    }
 }
