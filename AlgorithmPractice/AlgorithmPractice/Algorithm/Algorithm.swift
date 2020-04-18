@@ -8,21 +8,22 @@
 
 import Foundation
 
+/// 演算法練習用 class
 class Algorithm {
     
     /// 判斷在整數陣列中是否有重複的數值
     func hasDuplicatesInIntegerArray(_ intArray: [Int]) -> Bool {
         
-        // 需要它來達成取值 O(1)
+        // 需要它來達成取值 O(1)，以及判斷是否重複
         var intValueDic: [Int: Int] = [:]
-        
+
         for value in intArray {
-            
+
             // 如果拿得到值，代表重複了
             if intValueDic[value] != nil {
                 return true
             }
-            
+
             // 記錄，數值目前無意義
             intValueDic[value] = 1
         }
