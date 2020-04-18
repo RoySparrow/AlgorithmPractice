@@ -32,6 +32,45 @@ class Algorithm {
     
     /// 合併兩個已排序過的陣列，回傳結果也是排序好的
     func combineTwoSortedArray(first firstArray: [Int], andSecond secondArray: [Int]) -> [Int] {
-        return []
+        let firstArrayCount = firstArray.count
+        let secondArrayCount = secondArray.count
+        let totalCount = firstArrayCount+secondArrayCount
+        
+        // 建立固定大小的陣列
+        var finalArray = [Int](repeating: 0, count: totalCount)
+        
+        // 第一個陣列要進行比較的 index
+        var firstArrayCompareIndex = 0
+        
+        // 第二個陣列要進行比較的 index
+        var secondArrayCompareIndex = 0
+        
+        for i in 0..<finalArray.count {
+            if firstArrayCompareIndex == firstArrayCount {
+                
+                // 代表第一個陣列塞完了
+                finalArray[i] = secondArray[secondArrayCompareIndex]
+                secondArrayCompareIndex += 1
+                continue
+            }
+            if secondArrayCompareIndex == secondArrayCount {
+                
+                // 代表第二個陣列塞完了
+                finalArray[i] = firstArray[firstArrayCompareIndex]
+                firstArrayCompareIndex += 1
+                continue
+            }
+            
+            let firstValue = firstArray[firstArrayCompareIndex]
+            let secondValue = secondArray[secondArrayCompareIndex]
+            if firstValue < secondValue {
+                finalArray[i] = firstValue
+                firstArrayCompareIndex += 1
+            } else {
+                finalArray[i] = secondValue
+                secondArrayCompareIndex += 1
+            }
+        }
+        return finalArray
     }
 }
