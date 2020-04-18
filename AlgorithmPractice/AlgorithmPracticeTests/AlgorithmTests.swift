@@ -32,4 +32,11 @@ class AlgorithmTests: XCTestCase {
         let result = algorithmClass.hasDuplicatesInIntegerArray(intArray)
         XCTAssert(result == false)
     }
+    
+    func testCombineTwoSortedArray() {
+        let firstSortedArray = [1, 2, 3]
+        let secondSortedArray = [2, 5, 6]
+        let result = algorithmClass.combineTwoSortedArray(first: firstSortedArray, andSecond: secondSortedArray)
+        XCTAssert(result == [1, 2, 2, 3, 5, 6])
+    }
 }
