@@ -46,30 +46,29 @@ class Algorithm {
         var secondArrayCompareIndex = 0
         
         for i in 0..<finalArray.count {
+            var willAddValue: Int
             if firstArrayCompareIndex == firstArrayCount {
                 
-                // 代表第一個陣列塞完了
-                finalArray[i] = secondArray[secondArrayCompareIndex]
+                // 代表第一個陣列塞完了，剩第二個陣列的值
+                willAddValue = secondArray[secondArrayCompareIndex]
                 secondArrayCompareIndex += 1
-                continue
-            }
-            if secondArrayCompareIndex == secondArrayCount {
+            } else if secondArrayCompareIndex == secondArrayCount {
                 
-                // 代表第二個陣列塞完了
-                finalArray[i] = firstArray[firstArrayCompareIndex]
-                firstArrayCompareIndex += 1
-                continue
-            }
-            
-            let firstValue = firstArray[firstArrayCompareIndex]
-            let secondValue = secondArray[secondArrayCompareIndex]
-            if firstValue < secondValue {
-                finalArray[i] = firstValue
+                // 代表第二個陣列塞完了，剩第一個陣列的值
+                willAddValue = firstArray[firstArrayCompareIndex]
                 firstArrayCompareIndex += 1
             } else {
-                finalArray[i] = secondValue
-                secondArrayCompareIndex += 1
+                let firstValue = firstArray[firstArrayCompareIndex]
+                let secondValue = secondArray[secondArrayCompareIndex]
+                if firstValue < secondValue {
+                    willAddValue = firstValue
+                    firstArrayCompareIndex += 1
+                } else {
+                    willAddValue = secondValue
+                    secondArrayCompareIndex += 1
+                }
             }
+            finalArray[i] = willAddValue
         }
         return finalArray
     }
