@@ -15,6 +15,7 @@
 		49912FD3244B478900AA5411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49912FD1244B478900AA5411 /* LaunchScreen.storyboard */; };
 		49912FDE244B478900AA5411 /* AlgorithmPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912FDD244B478900AA5411 /* AlgorithmPracticeTests.swift */; };
 		49912FE9244B478900AA5411 /* AlgorithmPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912FE8244B478900AA5411 /* AlgorithmPracticeUITests.swift */; };
+		49912FFC244B48AA00AA5411 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49912FFB244B48AA00AA5411 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		49912FE4244B478900AA5411 /* AlgorithmPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49912FE8244B478900AA5411 /* AlgorithmPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmPracticeUITests.swift; sourceTree = "<group>"; };
 		49912FEA244B478900AA5411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49912FFB244B48AA00AA5411 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,9 @@
 		49912FC5244B478900AA5411 /* AlgorithmPractice */ = {
 			isa = PBXGroup;
 			children = (
-				49912FC6244B478900AA5411 /* AppDelegate.swift */,
-				49912FC8244B478900AA5411 /* SceneDelegate.swift */,
-				49912FCA244B478900AA5411 /* ViewController.swift */,
-				49912FCC244B478900AA5411 /* Main.storyboard */,
+				49912FF6244B47DD00AA5411 /* Algorithm */,
+				49912FF9244B487000AA5411 /* View */,
 				49912FCF244B478900AA5411 /* Assets.xcassets */,
-				49912FD1244B478900AA5411 /* LaunchScreen.storyboard */,
 				49912FD4244B478900AA5411 /* Info.plist */,
 			);
 			path = AlgorithmPractice;
@@ -126,6 +125,26 @@
 				49912FEA244B478900AA5411 /* Info.plist */,
 			);
 			path = AlgorithmPracticeUITests;
+			sourceTree = "<group>";
+		};
+		49912FF6244B47DD00AA5411 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				49912FFB244B48AA00AA5411 /* Algorithm.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		49912FF9244B487000AA5411 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49912FC6244B478900AA5411 /* AppDelegate.swift */,
+				49912FC8244B478900AA5411 /* SceneDelegate.swift */,
+				49912FCA244B478900AA5411 /* ViewController.swift */,
+				49912FCC244B478900AA5411 /* Main.storyboard */,
+				49912FD1244B478900AA5411 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49912FCB244B478900AA5411 /* ViewController.swift in Sources */,
+				49912FFC244B48AA00AA5411 /* Algorithm.swift in Sources */,
 				49912FC7244B478900AA5411 /* AppDelegate.swift in Sources */,
 				49912FC9244B478900AA5411 /* SceneDelegate.swift in Sources */,
 			);
