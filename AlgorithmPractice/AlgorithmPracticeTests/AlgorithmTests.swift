@@ -33,10 +33,26 @@ class AlgorithmTests: XCTestCase {
         XCTAssert(result == false)
     }
     
-    func testCombineTwoSortedArray() {
+    // TODO: - Need find "parameterized unit tests" solution...
+    
+    func testCombineTwoSortedArrayInCaseOne() {
         let firstSortedArray = [1, 2, 3]
         let secondSortedArray = [2, 5, 6]
         let result = algorithmClass.combineTwoSortedArray(first: firstSortedArray, andSecond: secondSortedArray)
         XCTAssert(result == [1, 2, 2, 3, 5, 6])
+    }
+    
+    func testCombineTwoSortedArrayInCaseTwo() {
+        let firstSortedArray = [1, 2, 3, 4, 5]
+        let secondSortedArray = [2, 4, 6]
+        let result = algorithmClass.combineTwoSortedArray(first: firstSortedArray, andSecond: secondSortedArray)
+        XCTAssert(result == [1, 2, 2, 3, 4, 4, 5, 6])
+    }
+    
+    func testCombineTwoSortedArrayInCaseThree() {
+        let firstSortedArray: [Int] = []
+        let secondSortedArray = [2, 5, 6]
+        let result = algorithmClass.combineTwoSortedArray(first: firstSortedArray, andSecond: secondSortedArray)
+        XCTAssert(result == [2, 5, 6])
     }
 }
